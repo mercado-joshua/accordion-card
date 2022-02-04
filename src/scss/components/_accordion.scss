@@ -1,0 +1,30 @@
+.accordion {
+    > .content {
+        > .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            > .image {
+                transition: all .3s ease;
+            } 
+        }
+
+        > .answer {
+            display: none;
+            margin-top: 1em;
+        }
+
+        &.-expand > .answer {
+            display: block;
+        }
+
+        &.-expand > .header > .image {
+            transform: rotate(-180deg);
+        }
+
+        &.-expand > .header > .question {
+            font-weight: bold;
+        }
+    }
+}

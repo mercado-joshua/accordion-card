@@ -1,0 +1,52 @@
+.faq-accordion {
+    position: relative;
+    // margin-top: 20em;
+    max-width: 375px;
+    background-color: #fff;
+    border-radius: 2em;
+
+    > .imagebox {
+        position: absolute;
+        top: -7em;
+        left: 15%;
+        width: 70%;
+
+        > .image {
+            filter: drop-shadow(0 30px 0 hsla(273, 75%, 66%, .8));
+        }
+    }
+
+    > .contentbox {
+        margin: 8em 2em 3em 2em;
+
+        > .title {
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        position: static;
+        max-width: 900px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        > .contentbox {
+            margin: 2em;
+
+            > .title {
+                text-align: left;
+            }
+        }
+
+        > .imagebox {
+            position: relative;
+            top: 4em;
+            left: 1em;
+            width: 100%;
+        }
+    }
+
+}
